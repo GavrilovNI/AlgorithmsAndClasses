@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class U_Alameda {
 
-    public static void main2(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
         Scanner in = new Scanner(System.in).useLocale(Locale.US);
 
@@ -29,7 +29,7 @@ public class U_Alameda {
 
 
         int q = in.nextInt();
-        int[] results = new int[q];
+        long[] results = new long[q];
 
         for(int i = 0; i < q; ++i)
         {
@@ -48,12 +48,12 @@ public class U_Alameda {
 
 class Fenwick2D {
     private final int sizeX, sizeY;
-    private final byte[][] bit;
+    private final long[][] bit;
 
     public Fenwick2D(int x, int y) {
         this.sizeX = x;
         this.sizeY = y;
-        bit = new byte[x + 1][y + 1];
+        bit = new long[x + 1][y + 1];
     }
 
     public void change(int x, int y, long delta) {

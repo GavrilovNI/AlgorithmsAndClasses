@@ -1,10 +1,7 @@
 package Codewars2024;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
 import java.util.Scanner;
 
 
@@ -28,17 +25,15 @@ public class J_Morse {
         put("---", "O");
         put(".--.", "P");
         put("--.-", "Q");
-        put(".--.", "P");
         put(".-.", "R");
         put("...", "S");
         put("-", "T");
-        put("..--", "U");
+        put("..-", "U");
         put("...-", "V");
         put(".--", "W");
         put("-..-", "X");
         put("-.--", "Y");
         put("--..", "Z");
-        put("...-", "V");
         put(".----", "1");
         put("..---", "2");
         put("...--", "3");

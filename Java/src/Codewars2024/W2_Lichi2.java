@@ -23,28 +23,25 @@ public class W2_Lichi2 {
         return true;
     }
 
-    public static void main2(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
         Scanner in = new Scanner(System.in).useLocale(Locale.US);
         
-        int n = in.nextInt();
+        int n = Integer.parseInt(in.nextLine());
 
         Fenwick fenwick = new Fenwick(n);
 
+        var vvv = in.nextLine().split(" ");
         for(int i = 0; i < n; ++i) {
-            long value = in.nextLong();
+            long value = Long.parseLong(vvv[i]);
             
-            if(!isPrime(value))
-                value = 0;
-
-            fenwick.change(i + 1, value);
+            if(isPrime(value))
+                fenwick.change(i + 1, value);
         }
 
-        int lines = in.nextInt();
+        int lines = Integer.parseInt(in.nextLine());
         long[] results = new long[lines];
         int resultsCount = 0;
-
-        in.nextLine();
     
         for(int i = 0; i < lines; ++i) {
             
@@ -63,7 +60,10 @@ public class W2_Lichi2 {
                 int index = Integer.parseInt(s[1]);
                 int value = Integer.parseInt(s[2]);
 
-                fenwick.set(index, value);
+                if(isPrime(value))
+                    fenwick.set(index, value);
+                else
+                    fenwick.set(index, 0);
             }
         }
 

@@ -1,14 +1,12 @@
 package Codewars2024;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Locale;
 import java.util.Scanner;
 
 
 public class M_Comprimir {
 
-    public static void main2(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
         Scanner in = new Scanner(System.in).useLocale(Locale.US);
 

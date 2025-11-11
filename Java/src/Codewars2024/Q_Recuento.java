@@ -1,37 +1,36 @@
 package Codewars2024;
 
-import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
 
 public class Q_Recuento {
 
-    public static void main2(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
         Scanner in = new Scanner(System.in).useLocale(Locale.US);
 
         int  t = in.nextInt();
 
-        int[] results = new int[t];
+        long[] results = new long[t];
 
-        int[] values = new int[1000];
+        long[] values = new long[1000];
 
         for(int q = 0; q < t; ++q)
         {
             int n = in.nextInt();
-            int k = in.nextInt();
+            long k = in.nextLong();
 
             for(int i = 0; i < n; ++i) 
-                values[i] = in.nextInt();
+                values[i] = in.nextLong();
             
             int l = 0;
             int r = n - 1;
 
 
-            int result = 0;
+            long result = 0;
 
-            while (k > 0 && l <= n)
+            while (k > 0 && l <= r)
             {
                 if(l == r)
                 {

@@ -15,6 +15,6 @@ public class C_Valencia {
         LocalTime t = LocalTime.parse( str) ;
         t = t.plusMinutes(30);
 
-        System.out.println("PELIGRO DE INUNDACIÓN: Evita entrar a \nsótanos y bajos, evita desplazamientos \ny busca un lugar alto. La inundación \nllegará a las " + t);
+        System.out.println("PELIGRO DE INUNDACION: Evita entrar a sotanos y bajos, evita desplazamientos y busca un lugar alto. La inundación llegara a las " + t);
     }
 }

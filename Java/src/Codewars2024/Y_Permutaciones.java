@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Y_Permutaciones {
 
-    public static void main2(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
         Scanner in = new Scanner(System.in).useLocale(Locale.US);
 
@@ -21,15 +21,15 @@ public class Y_Permutaciones {
             values[i] = initial[i] = in.nextInt();
         }
 
-        boolean found =  false;
         int[] values2 = new int[n];
         for(int i = 0; i < k; ++i)
         {
+            //System.out.print(i + ": ");
             boolean same = true;
             for(int j = 0; j < n; ++j)
             {
                 var ini = initial[j];
-                var v = values2[j] = values[ini - 1];
+                var v = values2[j] = values[ini - 1]; // initial[values[j] - 1] // уебанское задание
 
                 if(v != ini)
                     same = false;
@@ -39,12 +39,23 @@ public class Y_Permutaciones {
             values = values2;
             values2 = x;
 
-            if(!found && same)
+            //print(values);
+
+            if(same)
             {
                 k %= (i + 1);
                 i = -1;
+
+                //System.out.println("same");
             }
         }
+
+        print(values);
+    }
+
+    static void print(int[] values)
+    {
+        int n = values.length;
 
         StringBuilder result = new StringBuilder();
         for(int i = 0; i < n; ++i)
@@ -54,6 +65,6 @@ public class Y_Permutaciones {
                 result.append(' ');
         }
 
-        System.err.println(result);
+        System.out.println(result);
     }
 }

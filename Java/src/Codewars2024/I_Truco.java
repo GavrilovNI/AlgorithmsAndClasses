@@ -6,20 +6,20 @@ import java.util.Scanner;
 
 public class I_Truco {
 
-    public static void main2(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
         Scanner in = new Scanner(System.in).useLocale(Locale.US);
 
         int t = in.nextInt();
 
-        int[] results = new int[t];
+        long[] results = new long[t];
 
         for(int j = 0; j < t; ++j)
         {
             int n = in.nextInt();
             in.nextLine();
 
-            int result = 0;
+            long result = 0;
 
             for(int i = 0; i < n; ++ i)
             {
