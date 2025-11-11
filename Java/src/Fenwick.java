@@ -102,4 +102,12 @@ public class Fenwick
 
         return sumPrefix(i) - sumPrefix(i - 1);
     }
+
+    // slow
+    public void set(int i, long value) {
+        if(i == 0)
+            throw new IllegalArgumentException("Indexing in Fenwick starts from 1");
+
+        change(i, value - get(i));
+    }
 }
