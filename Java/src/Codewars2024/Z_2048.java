@@ -36,13 +36,13 @@ public class Z_2048 {
 
             var c = l[0];
             if(c.equals(">"))
-                moveRight();
-            else if(c.equals("<"))
-                moveLeft();
-            else if(c.equals("A"))
-                moveUp();
-            else
                 moveDown();
+            else if(c.equals("<"))
+                moveUp();
+            else if(c.equals("A"))
+                moveLeft();
+            else
+                moveRight();
 
             x = Integer.parseInt(l[1]) - 1;
             y = Integer.parseInt(l[2]) - 1;
@@ -50,18 +50,18 @@ public class Z_2048 {
 
             values[y][x] = value;
 
-            print();
+            //print();
         }
 
-        //print();
+        print();
     }
 
     static void print()
     {
         System.out.println();
-        for(int y = 0; y < 4; ++y)
+        for(int x = 0; x < 4; ++x)
         {
-            for(int x = 0; x < 4; ++x)
+            for(int y = 0; y < 4; ++y)
                 System.out.print(values[y][x] + " ");
             System.out.println();
         }
