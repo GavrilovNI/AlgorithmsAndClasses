@@ -23,7 +23,7 @@ public class W1_Lichi1 {
         return true;
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main2(String[] args) throws Exception {
 
         Scanner in = new Scanner(System.in).useLocale(Locale.US);
         

@@ -8,7 +8,7 @@ public class V_Mosquito {
 
     static Scanner in = null;
 
-    public static void main(String[] args) throws Exception {
+    public static void main2(String[] args) throws Exception {
 
         in = new Scanner(System.in).useLocale(Locale.US);
 

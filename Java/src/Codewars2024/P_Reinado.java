@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class P_Reinado {
 
-    public static void main(String[] args) throws Exception {
+    public static void main2(String[] args) throws Exception {
 
         Scanner in = new Scanner(System.in).useLocale(Locale.US);
 
