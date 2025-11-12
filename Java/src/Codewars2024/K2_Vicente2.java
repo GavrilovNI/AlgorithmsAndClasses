@@ -14,9 +14,9 @@ public class K2_Vicente2 {
         long[] prefixSum = new long[n + 1];
 
         long sum = 0;
-        int[] values = new int[n];
+        long[] values = new long[n];
         for (int i = 0; i < n; ++i) {
-            var value = values[i] = in.nextInt();
+            var value = values[i] = in.nextLong();
             sum += value;
             prefixSum[i + 1] = sum;
         }
